@@ -15,7 +15,8 @@ export interface EnvData {
   environment: ImmichEnvironment;
   configFile?: string;
   logLevel?: LogLevel;
-
+  userQuotaSizeInBytes?: number;
+  
   buildMetadata: {
     build?: string;
     buildUrl?: string;

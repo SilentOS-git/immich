@@ -27,7 +27,7 @@ async function bootstrap() {
   const logger = await app.resolve<ILoggerRepository>(ILoggerRepository);
   const configRepository = app.get<IConfigRepository>(IConfigRepository);
 
-  const { environment, host, port, resourcePaths } = configRepository.getEnv();
+  const { environment, host, port, resourcePaths, userQuotaSizeInBytes } = configRepository.getEnv();
   const isDev = environment === ImmichEnvironment.DEVELOPMENT;
 
   logger.setContext('Bootstrap');

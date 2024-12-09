@@ -95,6 +95,7 @@ const getEnv = (): EnvData => {
       throw new Error(`Invalid telemetry found: ${telemetry}`);
     }
   }
+  console.log(dto);
 
   return {
     host: dto.IMMICH_HOST,
@@ -102,6 +103,7 @@ const getEnv = (): EnvData => {
     environment,
     configFile: dto.IMMICH_CONFIG_FILE,
     logLevel: dto.IMMICH_LOG_LEVEL,
+    userQuotaSizeInBytes: dto.USER_QUOTASIZEINBYTES,
 
     buildMetadata: {
       build: dto.IMMICH_BUILD,
